@@ -1,0 +1,27 @@
+*{
+    background-color: #1c1c1c;
+    color: white;
+}
+#navbar{
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+#navbar img{
+  width: 40px;
+  margin: 10px;
+  
+}
+
+#navbar a{
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  font-size: 18px;
+}
+
+#links a{
+  align-items: right; 
+ 
+}
