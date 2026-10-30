@@ -1,27 +1,38 @@
-*{
-    background-color: #1c1c1c;
-    color: white;
-}
-#navbar{
+* {
   margin: 0px;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+#navbar {
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  height: 60px;
 }
 
-#navbar img{
-  width: 40px;
-  margin: 10px;
-  
+#navbar img {
+  width: 45px;
+  padding-right: 10px;
+
 }
 
-#navbar a{
+#navbar a {
   text-decoration: none;
   color: white;
   margin: 10px;
   font-size: 18px;
+  padding-right: 10px;
 }
 
-#links a{
-  align-items: right; 
- 
+#navbar a:hover {
+  color: #f8520a;
+  
+}
+
+#navbar hr {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid #f8520a;
 }
