@@ -36,3 +36,46 @@
   margin: 0px;
   border: 1px solid #f8520a;
 }
+
+
+#banner {
+  width: 100vw;
+  height: 70vh;
+  background-image: url('https://th.bing.com/th/id/OIP.NXeTQY8vt_q0Dzxy8L9R3AHaC6?w=345&h=137&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#banner_name{
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+}
+
+#movie_card{
+  width: 11vw;
+  height: 40vh;
+  background-image : url("https://th.bing.com/th/id/OIP.2BFVejmT8k9p_OEnlgvFMQHaLc?w=186&h=287&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3");
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+  
+}
+
+#movie_card:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+#movie_title{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: small;
+  text-align: center;
+}

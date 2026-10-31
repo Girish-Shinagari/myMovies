@@ -1,23 +1,27 @@
 
 import './App.css'
 import Navbar from './components/navbar'
-import {Route, Routes,BrowserRouter} from 'react-router-dom'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Home from './components/Home'
 import Movies from './components/Movies'
 import Watchlist from './components/Watchlist'
+import Banner from './components/Banner'
 
 function App() {
-  
+
 
   return (
     <>
-      
+
       <BrowserRouter>
-      <Navbar/>
+        <Navbar />
 
         <Routes>
-          
-          <Route path="/movies" element={<Movies />} />
+
+          <Route path="/movies" element={
+            <>
+              <Movies />
+            </>} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/home" element={<Home />} />
         </Routes>
