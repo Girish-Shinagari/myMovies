@@ -59,7 +59,6 @@
 #movie_card{
   width: 11vw;
   height: 40vh;
-  background-image : url("https://th.bing.com/th/id/OIP.2BFVejmT8k9p_OEnlgvFMQHaLc?w=186&h=287&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3");
   background-size: cover;
   border-radius: 10px;
   position: relative;
@@ -76,6 +75,10 @@
   bottom: 0px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  font-family:  'raleway', sans-serif;
   font-size: small;
+  font-weight: 100;
   text-align: center;
+  border-radius: 0px 0px 10px 10px;
+  padding: 3px 0px 3px 0px;
 }
