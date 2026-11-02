@@ -1,6 +1,6 @@
 import react from 'react';
 
-function Banner() {
+function Banner({backdrop_path}) {
     return (
         <>
             <div id="banner" >
