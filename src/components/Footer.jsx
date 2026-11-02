@@ -8,6 +8,10 @@ function Footer(){
 
         evwev
         vew
+        dsds
+        dsdsdsdsdsd
+        sdsdsd
+        sds
         </>
     )
 }
