@@ -182,3 +182,40 @@
     grid-column: span 1;
   }
 }
+
+#watchlist-buttons{
+  text-align: center;
+}
+
+#watchlist-buttons button{
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 15px;
+  border-color: #f8520a;
+}
+
+#watchlist-buttons button:hover{
+   color: #df6e3e;
+}
+
+#search-bar{
+  text-align: center;
+}
+
+#search-bar input{
+  width: 20vw;
+  height: 5vh;
+  background: #333;
+  padding-left: 10px;
+  border-color: #f8520a;
+  border-radius: 10px;
+  outline: none;
+}
+
+
+
+#table-headings th{
+  background-color: #3d3d3d;
+  
+}
