@@ -5,7 +5,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Home from './components/Home'
 import Movies from './components/Movies'
 import Watchlist from './components/Watchlist'
-import Banner from './components/Banner'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -21,11 +21,16 @@ function App() {
           <Route path="/movies" element={
             <>
               <Movies />
+              
             </>} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/home" element={<Home />} />
         </Routes>
+
+         
       </BrowserRouter>
+
+     
     </>
   )
 }
