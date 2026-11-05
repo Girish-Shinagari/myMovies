@@ -31,6 +31,11 @@
 
 }
 
+#links a:active{
+   text-decoration: underline;
+   color: #f8520a;
+}
+
 #navbar hr {
   width: 100%;
   margin: 0px;
