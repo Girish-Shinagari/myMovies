@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from './pictures/logo.png'
 import '../App.css'
 import { NavLink } from 'react-router-dom'
 
-
 function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false)
+
     return (
         <>
             <div id="navbar">
-                <NavLink to="/home"> 
+                <NavLink to="/home">
                     <img src={logo} alt="img not loaded" />
                 </NavLink>
-                <div id="links">
-                  <NavLink to="/movies">Movies</NavLink>
-                    <NavLink to="/watchlist">Watchlist</NavLink>
-                    <NavLink to="/home">Home</NavLink>
-                </div> 
+
+                <button
+                    id="menu-btn"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded={menuOpen}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div id="links" className={menuOpen ? "active" : ""}>
+                    <NavLink to="/movies" onClick={() => setMenuOpen(false)}>Movies</NavLink>
+                    <NavLink to="/watchlist" onClick={() => setMenuOpen(false)}>Watchlist</NavLink>
+                    <NavLink to="/home" onClick={() => setMenuOpen(false)}>Home</NavLink>
+                </div>
                 <hr />
             </div>
         </>

@@ -5,17 +5,16 @@
 }
 
 #navbar {
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   height: 60px;
+  position: relative;
 }
 
 #navbar img {
   width: 45px;
   padding-right: 10px;
-
 }
 
 #navbar a {
@@ -28,12 +27,16 @@
 
 #navbar a:hover {
   color: #f8520a;
-
 }
 
-#links a.active{
-   
-   color: #f8520a;
+#links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+#links a.active {
+  color: #f8520a;
 }
 
 #navbar hr {
@@ -42,11 +45,15 @@
   border: 1px solid #f8520a;
 }
 
+#menu-btn {
+  display: none;
+}
+
 
 #banner {
   width: 100vw;
   height: 70vh;
-  background-image: url('https://th.bing.com/th/id/OIP.NXeTQY8vt_q0Dzxy8L9R3AHaC6?w=345&h=137&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3');
+  /* background-image: url('https://th.bing.com/th/id/OIP.NXeTQY8vt_q0Dzxy8L9R3AHaC6?w=345&h=137&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3'); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -103,15 +110,16 @@
   background: #111;
 }
 
-.footer-brand{
-    background: #111;
+.footer-brand {
+  background: #111;
 
 }
+
 .footer-brand img {
   width: 100px;
   height: auto;
   margin-bottom: 15px;
-    background: #111;
+  background: #111;
 
 }
 
@@ -119,7 +127,7 @@
   max-width: 250px;
   line-height: 1.7;
   font-size: 14px;
-    background: #111;
+  background: #111;
 
 }
 
@@ -134,7 +142,7 @@
   color: white;
   font-size: 16px;
   margin-bottom: 5px;
-    background: #111;
+  background: #111;
 
 }
 
@@ -157,17 +165,61 @@
   padding-top: 20px;
   text-align: center;
   font-size: 13px;
-    background: #111;
+  background: #111;
 
 }
 
-.footer-bottom p{
-    background: #111;
+.footer-bottom p {
+  background: #111;
 
 }
+
+#watchlist-buttons {
+  text-align: center;
+}
+
+#watchlist-buttons button {
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border-radius: 15px;
+  border-color: #f8520a;
+}
+
+#watchlist-buttons button:hover {
+  color: #df6e3e;
+}
+
+#search-bar {
+  text-align: center;
+}
+
+#search-bar input {
+  width: 20vw;
+  height: 5vh;
+  background: #333;
+  padding-left: 10px;
+  border-color: #f8520a;
+  border-radius: 10px;
+  outline: none;
+}
+
+
+
+#table-headings th {
+  background-color: #3d3d3d;
+
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
+  #movie_card {
+    width: 20vw;
+    height: 30vh;
+  }
+
   .footer-container {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -188,39 +240,82 @@
   }
 }
 
-#watchlist-buttons{
-  text-align: center;
+@media (max-width:360px) {
+  #movie_card {
+    width: 35vw;
+    height: 33vh;
+  }
+
+  #footer-brand img {
+    width: 60px;
+  }
 }
 
-#watchlist-buttons button{
-  width: 100px;
-  height: 40px;
-  margin: 20px;
-  border-radius: 15px;
-  border-color: #f8520a;
+@media (max-width: 400px) {
+  #navbar {
+    height: 50px;
+  }
+
+  #navbar hr {
+    width: 100%;
+    margin: 0px;
+    border: 1px solid #f8520a;
+  }
+
+  #links {
+    display: none;
+  }
+
+  #links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 180px;
+    background-color: #1c1c1c;
+    border: 1px solid #f8520a;
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 20;
+  }
+
+  #links.active a {
+    margin: 0;
+    padding: 12px 20px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 22px;
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  #menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
 }
 
-#watchlist-buttons button:hover{
-   color: #df6e3e;
-}
-
-#search-bar{
-  text-align: center;
-}
-
-#search-bar input{
-  width: 20vw;
-  height: 5vh;
-  background: #333;
-  padding-left: 10px;
-  border-color: #f8520a;
-  border-radius: 10px;
-  outline: none;
-}
-
-
-
-#table-headings th{
-  background-color: #3d3d3d;
-  
+#menu {
+  height: 100vh;
+  width: 30vw;
+  background-color: #1c1c1c;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }

@@ -26,6 +26,7 @@ function Movies() {
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=a18f9444f6b4811c7983a0ef8d82d5ff&language=en-US&page=${currentPage}`)
       .then(function (res) {
+        console.log(res.data.results)
         setMovies(res.data.results) 
         
       })
@@ -39,7 +40,7 @@ function Movies() {
 
   return (
     <>
-      <Banner />
+      <Banner backdrop_path={movies[0]?.backdrop_path} title = {movies[0]?.title} />
       <h3 style={{ textAlign: "center", fontWeight: "300", width: "100%", margin: "5px" }}>Trending Movies</h3>
       <hr></hr>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px", marginTop: "10px" }}>
