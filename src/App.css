@@ -31,8 +31,8 @@
 
 }
 
-#links a:active{
-   text-decoration: underline;
+#links a.active{
+   
    color: #f8520a;
 }
 
@@ -54,7 +54,7 @@
 
 #banner_name {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   text-align: center;

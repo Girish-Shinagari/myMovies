@@ -1,21 +1,21 @@
 import React from "react";
 import logo from './pictures/logo.png'
 import '../App.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 function Navbar() {
     return (
         <>
             <div id="navbar">
-                <Link to="/home">
+                <NavLink to="/home"> 
                     <img src={logo} alt="img not loaded" />
-                </Link>
+                </NavLink>
                 <div id="links">
-                    <Link to="/movies">Movies</Link>
-                    <Link to="/watchlist">Watchlist</Link>
-                    <Link to="/home">Home</Link>
-                </div>
+                  <NavLink to="/movies">Movies</NavLink>
+                    <NavLink to="/watchlist">Watchlist</NavLink>
+                    <NavLink to="/home">Home</NavLink>
+                </div> 
                 <hr />
             </div>
         </>
