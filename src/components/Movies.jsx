@@ -7,11 +7,10 @@ import MoviePages from "./MoviePages";
 import axios from "axios";
 import Footer from "./Footer";
 
-function Movies() {
+function Movies({watchlist, setWatchlist}) {
 
   const [ movies, setMovies ] = useState([]);
   const [ currentPage, setCurrentPage ] = useState(1);
-  const  [ watchlist, setWatchlist] = useState([]);
 
   function prevPage() {
     if (currentPage > 1) {
