@@ -1,11 +1,17 @@
-import react from 'react'
+import react, { useState } from 'react'
 
 function Watchlist({watchlist, handleRemoveFromWatchList}) {
+
+  const [search,setSearch] = useState("")
+
+  function handleSearch(e) {
+    setSearch(e.target.value)
+  }
   return (
     <>
 
 
-      <div id="watchList-sectoin-one">
+      <div id="watchList-section-one">
 
         <div id="watchlist-buttons">
           <button>All types</button>
@@ -14,11 +20,11 @@ function Watchlist({watchlist, handleRemoveFromWatchList}) {
         </div>
 
         <div id='search-bar'>
-          <input type="text" placeholder='search movies' />
+          <input type="text" onChange={handleSearch} value={search} placeholder='search movies' />
         </div>
       </div>
 
-      <div id="watchList-sectoin-two" style={{ marginTop: '20px' ,overflow: 'auto' }}>
+      <div id="watchList-section-two" style={{ marginTop: '20px' ,overflow: 'auto' }}>
         <table style={{ width: '90vw', marginLeft: '5vw', tableLayout: 'fixed', border: '2px solid #3d3d3d', borderRadius: '10px' }}>
           <thead id='table-headings' style={{ textAlign: 'center' }}>
             <tr >
@@ -30,7 +36,10 @@ function Watchlist({watchlist, handleRemoveFromWatchList}) {
           </thead >
 
           <tbody>
-            {watchlist.map((movie) => {
+            {watchlist.filter((movie)=>{
+                return movie.title.toLowerCase().includes(search.toLocaleLowerCase())
+              
+            }).map((movie) => {
               return (
                 <>
                   <tr style={{ border: '5px solid white' }}>
