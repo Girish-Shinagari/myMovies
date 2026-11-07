@@ -53,7 +53,6 @@
 #banner {
   width: 100vw;
   height: 70vh;
-  /* background-image: url('https://th.bing.com/th/id/OIP.NXeTQY8vt_q0Dzxy8L9R3AHaC6?w=345&h=137&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3'); */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -94,6 +93,16 @@
   border-radius: 0px 0px 10px 10px;
   padding: 5px 0px 5px 0px;
 }
+
+#liked-movie{
+  position: absolute;
+  top:5px;
+  right: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
 
 
 .footer {
@@ -208,7 +217,14 @@
 
 #table-headings th {
   background-color: #3d3d3d;
-
+}
+#menu {
+  height: 100vh;
+  width: 30vw;
+  background-color: #1c1c1c;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 
@@ -238,6 +254,11 @@
   .footer-brand {
     grid-column: span 1;
   }
+
+  #movie_card {
+    width: 30vw;
+    height: 25vh;
+  }
 }
 
 @media (max-width:360px) {
@@ -260,6 +281,10 @@
     width: 100%;
     margin: 0px;
     border: 1px solid #f8520a;
+  }
+
+  #navbar button{
+    margin-right: 10px;
   }
 
   #links {
@@ -309,13 +334,14 @@
     background-color: white;
     border-radius: 2px;
   }
+
+  #movie_card {
+    width: 40vw;
+    height: 30vh;
+  }
 }
 
-#menu {
-  height: 100vh;
-  width: 30vw;
-  background-color: #1c1c1c;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+table td{
+  text-align: center;
 }
+
