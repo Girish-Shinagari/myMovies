@@ -7,7 +7,7 @@ import MoviePages from "./MoviePages";
 import axios from "axios";
 import Footer from "./Footer";
 
-function Movies({watchlist, setWatchlist}) {
+function Movies({watchlist, handleAddtoWatchList, handleRemoveFromWatchList}) {
 
   const [ movies, setMovies ] = useState([]);
   const [ currentPage, setCurrentPage ] = useState(1);
@@ -22,18 +22,7 @@ function Movies({watchlist, setWatchlist}) {
     setCurrentPage(currentPage+1);
   }
 
-  function handleAddtoWatchList(movie){
-    let newWatchList = [...watchlist,movie];
-    setWatchlist(newWatchList);
-    console.log(newWatchList) ;
-  }
-
-  function handleRemoveFromWatchList(movie) {
-    let filteredWatchList = watchlist.filter((mov) => {
-      return movie.id != mov.id
-    })
-    setWatchlist(filteredWatchList)
-  }
+  
   
   useEffect(() => {
     axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=a18f9444f6b4811c7983a0ef8d82d5ff&language=en-US&page=${currentPage}`)
@@ -58,7 +47,7 @@ function Movies({watchlist, setWatchlist}) {
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px", marginTop: "10px" }}>
         {movies.map((movie) => {
           return (
-            <MovieCard poster_path={movie.poster_path} title={movie.title} handleAddtoWatchList={handleAddtoWatchList} handleRemoveFromWatchList={handleRemoveFromWatchList} movie={movie} watchlist={watchlist}/>
+            <MovieCard key={movie.id} poster_path={movie.poster_path} title={movie.title} handleAddtoWatchList={handleAddtoWatchList} handleRemoveFromWatchList={handleRemoveFromWatchList} movie={movie} watchlist={watchlist}/>
           )
         })}
       </div>

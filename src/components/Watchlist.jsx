@@ -1,6 +1,6 @@
 import react from 'react'
 
-function Watchlist({watchlist,setWatchlist}) {
+function Watchlist({watchlist, handleRemoveFromWatchList}) {
   return (
     <>
 
@@ -18,8 +18,8 @@ function Watchlist({watchlist,setWatchlist}) {
         </div>
       </div>
 
-      <div id="watchList-sectoin-two" style={{ marginTop: '20px' }}>
-        <table style={{ width: '90vw', marginLeft: '5vw', tableLayout: 'fixed', border: '2px solid #3d3d3d' }}>
+      <div id="watchList-sectoin-two" style={{ marginTop: '20px' ,overflow: 'auto' }}>
+        <table style={{ width: '90vw', marginLeft: '5vw', tableLayout: 'fixed', border: '2px solid #3d3d3d', borderRadius: '10px' }}>
           <thead id='table-headings' style={{ textAlign: 'center' }}>
             <tr >
               <th style={{ width: '40vw' }}>Name</th>
@@ -35,13 +35,13 @@ function Watchlist({watchlist,setWatchlist}) {
                 <>
                   <tr style={{ border: '5px solid white' }}>
                     <td style={{ display: 'flex', alignItems: 'center' }}>
-                      <img style={{ height: '15vh', paddingLeft: '5px' }} src={movie.poster_path} alt={movie.title} />
+                      <img style={{ height: '15vh', paddingLeft: '5px' }} src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
                       <div style={{ paddingLeft: '5px' }}>{movie.title}</div>
                     </td>
                     <td >{movie.vote_average}</td>
                     <td > {movie.popularity} </td>
                     <td >action</td>
-                    <td ><span style={{ color: 'red', cursor: 'pointer' }}>remove</span></td>
+                    <td ><span onClick={()=>{handleRemoveFromWatchList(movie)}} style={{ color: 'red', cursor: 'pointer' }}>remove</span></td>
 
                   </tr>
                 </>
