@@ -5,11 +5,15 @@
 }
 
 #navbar {
+  margin: 0px;
   display: flex;
-  flex-wrap: wrap;
+  box-sizing: border-box;
   align-items: center;
   height: 60px;
-  position: relative;
+  width: 100vw;
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }
 
 #navbar img {
@@ -230,6 +234,20 @@
 
 
 /* Responsive */
+@media (max-width: 1040px) {
+  #movie_card {
+    width: 23vw;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 980px) {
+  #movie_card {
+    width: 20vw;
+    height: 35vh;
+  }
+}
+
 @media (max-width: 768px) {
   #movie_card {
     width: 20vw;
@@ -274,7 +292,7 @@
 
 @media (max-width: 400px) {
   #navbar {
-    height: 50px;
+    height: 60px;
   }
 
   #navbar hr {

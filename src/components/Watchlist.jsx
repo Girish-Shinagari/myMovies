@@ -1,5 +1,7 @@
 import react, { useState } from 'react'
 
+import genreids from '../Utility/genre'
+
 function Watchlist({watchlist, handleRemoveFromWatchList}) {
 
   const [search,setSearch] = useState("")
@@ -49,7 +51,7 @@ function Watchlist({watchlist, handleRemoveFromWatchList}) {
                     </td>
                     <td >{movie.vote_average}</td>
                     <td > {movie.popularity} </td>
-                    <td >action</td>
+                    <td >{genreids[movie.genre_ids[0]]}</td>
                     <td ><span onClick={()=>{handleRemoveFromWatchList(movie)}} style={{ color: 'red', cursor: 'pointer' }}>remove</span></td>
 
                   </tr>

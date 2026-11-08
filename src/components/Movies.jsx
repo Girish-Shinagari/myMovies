@@ -41,7 +41,7 @@ function Movies({watchlist, handleAddtoWatchList, handleRemoveFromWatchList}) {
 
   return (
     <>
-      <Banner backdrop_path={movies[0]?.backdrop_path} title = {movies[0]?.title} />
+      <Banner backdrop_path={movies[1]?.backdrop_path} title = {movies[1]?.title} />
       <h3 style={{ textAlign: "center", fontWeight: "300", width: "100%", margin: "5px" }}>Trending Movies</h3>
       <hr></hr>
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "10px", marginTop: "10px" }}>
