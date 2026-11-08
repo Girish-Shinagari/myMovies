@@ -6,7 +6,7 @@ function Watchlist({watchlist, handleRemoveFromWatchList}) {
 
   const [search,setSearch] = useState("")
   const [genreList,setGenreList] = useState(["All types"])
-  const [currentGenre,setCurrentGenre] = useState("All types")
+  const [currentGenre,setCurrentGenre] = useState("All Genre")
 
   function handleSearch(e) {
     setSearch(e.target.value)
@@ -44,7 +44,7 @@ function Watchlist({watchlist, handleRemoveFromWatchList}) {
         </div>
       </div>
 
-      <div id="watchList-section-two" style={{ marginTop: '20px' ,overflow: 'auto' }}>
+      <div id="watchList-section-two" className="watchlist-table-wrapper" style={{ marginTop: '20px' }}>
         <table style={{ width: '90vw', marginLeft: '5vw', tableLayout: 'fixed', border: '2px solid #3d3d3d', borderRadius: '10px' }}>
           <thead id='table-headings' style={{ textAlign: 'center' }}>
             <tr >
