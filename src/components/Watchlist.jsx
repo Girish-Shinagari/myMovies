@@ -1,24 +1,42 @@
-import react, { useState } from 'react'
+import react, { useState,useEffect } from 'react'
 
 import genreids from '../Utility/genre'
 
 function Watchlist({watchlist, handleRemoveFromWatchList}) {
 
   const [search,setSearch] = useState("")
+  const [genreList,setGenreList] = useState(["All types"])
+  const [currentGenre,setCurrentGenre] = useState("All types")
 
   function handleSearch(e) {
     setSearch(e.target.value)
   }
+
+  function handleButtonClick(genre) {
+    setCurrentGenre(genre)
+  }
+
+  useEffect(()=>{
+     let temp = watchlist.map((movie)=>{
+      return genreids[movie.genre_ids[0]]
+     })
+     temp = new Set(temp)
+     setGenreList(['All Genre',...temp])
+  },[watchlist])
+
+
   return (
     <>
 
 
       <div id="watchList-section-one">
-
+         
         <div id="watchlist-buttons">
-          <button>All types</button>
-          <button>Action</button>
-          <button>Crime</button>
+          {genreList.map((genre)=>{
+            return (
+              <button onClick={()=>{handleButtonClick(genre)}} id={currentGenre == genre ? "clicked-button" : "unclicked-button"}>{genre}</button>
+            )
+          })}
         </div>
 
         <div id='search-bar'>
@@ -33,12 +51,18 @@ function Watchlist({watchlist, handleRemoveFromWatchList}) {
               <th style={{ width: '40vw' }}>Name</th>
               <th >Ratings</th>
               <th >Popularity</th>
-              <th >type</th>
+              <th >Genre</th>
             </tr >
           </thead >
 
           <tbody>
             {watchlist.filter((movie)=>{
+              if(currentGenre == "All Genre"){
+                return true
+              }else{
+                return genreids[movie.genre_ids[0]] == currentGenre
+              }
+            }).filter((movie)=>{
                 return movie.title.toLowerCase().includes(search.toLocaleLowerCase())
               
             }).map((movie) => {

@@ -14,7 +14,7 @@ function App() {
     let newWatchList = [...watchlist,movie];
     setWatchlist(newWatchList);
     localStorage.setItem('storage', JSON.stringify(newWatchList));
-    console.log(newWatchList) ;
+    
   }
 
    function handleRemoveFromWatchList(movie) {
