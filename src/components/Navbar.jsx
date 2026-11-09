@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <>
             <div id="navbar">
-                <NavLink to="/home">
+                <NavLink to="/about">
                     <img src={logo} alt="img not loaded" />
                 </NavLink>
 
@@ -28,7 +28,7 @@ function Navbar() {
                 <div id="links" className={menuOpen ? "active" : ""}>
                     <NavLink to="/movies" onClick={() => setMenuOpen(false)}>Movies</NavLink>
                     <NavLink to="/watchlist" onClick={() => setMenuOpen(false)}>Watchlist</NavLink>
-                    <NavLink to="/home" onClick={() => setMenuOpen(false)}>Home</NavLink>
+                    <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
                 </div>
                 <hr />
             </div>

@@ -2,10 +2,11 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import Home from './components/Home'
+import Home from './components/About'
 import Movies from './components/Movies'
 import Watchlist from './components/Watchlist' 
 import {useState,useEffect} from 'react'
+import About from './components/About'
 
 function App() {
   const  [ watchlist, setWatchlist] = useState([]);
@@ -44,7 +45,7 @@ function App() {
           <Route path="/" element={<Movies watchlist={watchlist} setWatchlist={setWatchlist} handleAddtoWatchList={handleAddtoWatchList} handleRemoveFromWatchList={handleRemoveFromWatchList}/>} />
           <Route path="/movies" element={<Movies watchlist={watchlist} setWatchlist={setWatchlist} handleAddtoWatchList={handleAddtoWatchList} handleRemoveFromWatchList={handleRemoveFromWatchList}/>} />
           <Route path="/watchlist" element={<Watchlist watchlist={watchlist} setWatchlist={setWatchlist} handleAddtoWatchList={handleAddtoWatchList} handleRemoveFromWatchList={handleRemoveFromWatchList}/>} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
 
          
