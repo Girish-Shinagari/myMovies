@@ -1,16 +1,63 @@
-# React + Vite
+# 🎬 myMovies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie discovery website built using React.js that allows users to explore movies and manage their personal watchlist.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://my-movies-lyart.vercel.app
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse popular movies
+- Fetch movie data using TMDB API
+- View movie details
+- Search and explore movies
+- Add movies to your watchlist
+- Responsive user interface
+- React Router navigation
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- TMDB API
+- Vite
+- Git & GitHub
+- Vercel
+
+## 📂 Project Setup
+
+1. Clone the repository:
+
+   git clone https://github.com/Girish-Shinagari/myMovies.git
+
+2. Navigate to the project directory:
+
+   cd myMovies
+
+3. Install dependencies:
+
+   npm install
+
+4. Start the development server:
+
+   npm run dev
+
+5. Build the project:
+
+   npm run build
+
+## 🚀 Deployment
+
+Deployed using Vercel.
+
+Live Website: https://my-movies-lyart.vercel.app
+
+## 👨‍💻 Developer
+
+Girish Shinagari
+
+GitHub: https://github.com/Girish-Shinagari
