@@ -1,7 +1,7 @@
 import react, { useState } from 'react';
 import heart from './pictures/heart.png';
 import cross from './pictures/cross.png';
-import '../app.css'
+import '../App.css'
 import Movies from './Movies';
 
 
